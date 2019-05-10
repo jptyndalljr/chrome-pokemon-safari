@@ -1,20 +1,66 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style media="screen">
-      #buttonDiv {
-        display: flex;
-      }
-      button {
-        height: 30px;
-        width: 30px;
-        outline: none;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <p>Pokemon Web Safari</p>
-    <div id="buttonDiv"></div>
+    <p style="text-align: center">Pokemon Web Safari</p>
+    <div class="pokedexWrapper">
+      <div class="pokedex-bg">
+        <div class="pokedex-header">
+          <p class="title">SAFARI POKeDEX</p>
+          <div class="header-right"></div>
+          <div class="boltLeft"></div>
+          <div class="boltRight"></div>
+        </div>
+        <div class="pokedex-body">
+          <div class="pokemon-display"></div>
+          <div class="pokemon-list-wrapper">
+            <ul class="pokemon-list">
+              <li class="pokemon-list-item">Test 1</li>
+              <li class="pokemon-list-item">Test 2</li>
+              <li class="pokemon-list-item">Test 3</li>
+              <li class="pokemon-list-item">Test 4</li>
+              <li class="pokemon-list-item">Test 5</li>
+              <li class="pokemon-list-item">Test 6</li>
+              <li class="pokemon-list-item">Test 7</li>
+              <li class="pokemon-list-item">Test 8</li>
+              <li class="pokemon-list-item">Test 9</li>
+              <li class="pokemon-list-item">Test 10</li>
+              <li class="pokemon-list-item">Test 11</li>
+              <li class="pokemon-list-item">Test 12</li>
+              <li class="pokemon-list-item">Test 13</li>
+              <li class="pokemon-list-item">Test 14</li>
+              <li class="pokemon-list-item">Test 15</li>
+              <li class="pokemon-list-item">Test 16</li>
+              <li class="pokemon-list-item">Test 17</li>
+              <li class="pokemon-list-item">Test 18</li>
+              <li class="pokemon-list-item">Test 19</li>
+              <li class="pokemon-list-item">Test 20</li>
+              <li class="pokemon-list-item">Test 21</li>
+              <li class="pokemon-list-item">Test 22</li>
+              <li class="pokemon-list-item">Test 23</li>
+              <li class="pokemon-list-item">Test 24</li>
+              <li class="pokemon-list-item">Test 25</li>
+              <li class="pokemon-list-item">Test 26</li>
+              <li class="pokemon-list-item">Test 27</li>
+              <li class="pokemon-list-item">Test 28</li>
+              <li class="pokemon-list-item">Test 29</li>
+              <li class="pokemon-list-item">Test 30</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pokedex-footer">
+          <p class="seenLabel">SEEN</p>
+          <p id="seenCount">0</p>
+          <p class="capturedLabel">CAPTURED</p>
+          <p id="capturedCount">0</p>
+          <div class="footer-right"></div>
+          <div class="boltLeft"></div>
+          <div class="boltRight"></div>
+        </div>
+      </div>
+    </div>
     <script src="popup.js"></script>
   </body>
 </html>
