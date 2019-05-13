@@ -4,13 +4,14 @@
   "description": "Catch Pokemon while you surf the web!",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["jquery-3.4.1.min.js", "background.js"],
     "persistent": false
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "css": ["styles.css"],
+      "js": ["jquery-3.4.1.min.js", "content.js"]
     }
   ],
   "options_page": "options.html",
