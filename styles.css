@@ -28,7 +28,17 @@
   --color-pb-yellow: #f8e8b0;
   --color-pb-yellow2: #e8d0b0;
   --color-pb-yellow3: #d0b8a8;
-  --color-pb-yello4: #c0a0a0;
+  --color-pb-yellow4: #c0a0a0;
+}
+
+.welcome-header {
+  text-align: center;
+  font-family: 'Pokemon';
+}
+
+.welcome-subheader {
+  text-align: center;
+  font-family: 'Pokemon';
 }
 
 .pokedexWrapper {
@@ -316,4 +326,103 @@
   position: fixed;
   bottom: 10px;
   left: 10px;
+  width: 48px;
+  height: 48px;
+  z-index: 1000;
+}
+
+.grass {
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  cursor: pointer;
+}
+
+.grass.is-animated {
+  animation: shake 4s cubic-bezier(.36,.07,.19,.97) both infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  2.5%, 22.5% {
+    transform: translate3d(-0.5px, 0, 0);
+    transform: rotateZ(-1.25deg);
+  }
+
+  4%, 20% {
+    transform: translate3d(1px, 0, 0);
+    transform: rotateZ(2.5deg);
+  }
+
+  7.5%, 12.5%, 14% {
+    transform: translate3d(-2px, 0, 0);
+    transform: rotateZ(-5deg);
+  }
+
+  10%, 15% {
+    transform: translate3d(2px, 0, 0);
+    transform: rotateZ(5deg);
+  }
+}
+
+.encounter-scene {
+  display: none;
+  position: fixed;
+  top: 25%;
+  left: 40%;
+  width: 528px;
+  height: 456px;
+  border: 16px solid white;
+  border-bottom: 116px solid white;
+  border-radius: 8px;
+/*   background: url("https://ibin.co/4h5wkuX4vwzs.png"); */
+  background: linear-gradient(#E0F0E8 50%, #408880 100%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 0px 0px 8px 3px #9f9f9f;
+}
+
+.encounter-stage {
+  position: relative;
+  margin: 38% auto;
+  width: 240px;
+  height: 80px;
+  border-radius: 100% / 100%;
+  border: 4px solid #98c8a8;
+  background-color: #c8e8d8;
+}
+
+.encounter-textbox {
+  margin-top: -131px;
+  width: 498px;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    #f8f8f8,
+    #f0f0f8
+  );
+  border: 4px solid gray;
+  border-radius: 10px;
+}
+
+.encounter-text {
+  margin-left: 16px;
+  margin-top: 6px;
+  font-size: 16px;
+  font-family: 'Courier New', monospace;
+}
+
+.text-arrow {
+  position: absolute;
+  bottom: -90px;
+  right: 16px;
+  width: 1px;
+  height: 1px;
+  border: solid gray;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
 }
