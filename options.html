@@ -1,20 +1,34 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <style media="screen">
-      button {
-        height: 30px;
-        width: 30px;
-        outline: none;
-        margin: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="buttonDiv"></div>
-    <div>
-      <p>Choose a different background color!</p>
-    </div>
-    <script src="options.js"></script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <script src="jquery-3.4.1.min.js"></script>
+  <title>Pokemon Web Safari Options</title>
+</head>
+<body>
+  <div class="encounter-delay-wrapper">
+    <h2>Encounter delay</h2>
+    <p>Enabling this option will delay the next chance encounter by the selected time period</p>
+    <select name="encounter-timer" id="encounterTimer">
+      <option value="off">Off (default)</option>
+      <option value="15m">15 min</option>
+      <option value="30m">30 min</option>
+      <option value="1hr">1 hr</option>
+    </select>
+    <br><br>
+    <h2>Debug tools</h2>
+    <button id="clearSync">Clear sync storage</button>
+    <button id="setStarted">Set started</button>
+    <button id="resetStarted">Set not started</button>
+    <button id="getStarted">Get is started</button>
+    <button id="clearFound">Clear all found</button>
+    <button id="setFound">Set all found</button>
+    <button id="getFound">Get is found</button>
+    <button id="showFound">Show found pokemon</button>
+  </div>
+  <script src="options.js"></script>
+</body>
 </html>

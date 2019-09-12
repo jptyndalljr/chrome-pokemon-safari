@@ -30,5 +30,18 @@
     "48": "images/get_started48.png",
     "128": "images/get_started128.png"
   },
+  "key": "-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlGq03D392BHAxv/SSt8+
+KVdwrfzjivAcs+AhmKwvsry/BxHrKjbpVRpbzlhvCA6zLkVv1hxUOA/8MBcKmdAJ
+Jle+4DiLKynWGKGqiwCNwk9X/P/s0sWnWuRJT13RMH74e40+96pL5m+VZwz1Ob6t
+EmUfzDAaf3E+FWF/f0ZaQBuITJvf9NLAetpput9uBY4cgKQvPA3xOAibrXDv+0Kp
+t+8iCK2hg7KMLdYl14NldAsc2J/j21GMQFKPqV6tJYTZtM0ghjMiqfoty8t48SLQ
+7WjBe+sMQn7q6uA0HDVyFDOimTM65jx2weqt7GTc/K7wTGzvzlIdeRZMvqdP4cHU
+uQIDAQAB
+-----END PUBLIC KEY-----",
+"oauth2": {
+  "client_id": "179641627493-paartmdsd0pqapu3bv1dbp2iigjl45mh.apps.googleusercontent.com",
+  "scopes": ["profile", "email", "openid"]
+},
   "manifest_version": 2
 }

@@ -9,6 +9,8 @@ $(function() {
   var img = document.createElement('img');
   img.src = "https://ibin.co/4gzPObhRjgE0.png";
   grass.append(img);
+
+  // TODO add to trigger function
   $('body').append(safariScene);
 
   // Build encounter scene
@@ -27,6 +29,8 @@ $(function() {
   var textArrow = document.createElement('div');
   textArrow.classList.add('text-arrow');
   encounterTextbox.append(textArrow);
+
+  // TODO move to trigger function
   $('body').append(encounterScene);
 
   setTimeout(function() {

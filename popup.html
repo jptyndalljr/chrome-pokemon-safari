@@ -4,15 +4,14 @@
     <link rel="stylesheet" href="styles.css">
     <script src="jquery-3.4.1.min.js"></script>
     <script src="pokeapi-js-wrapper.js"></script>
-    <script src="firebase/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="firebase/firebaseui.css" />
   </head>
   <body>
     <h1 class="welcome-header">Welcome to the Safari!</h1>
     <h2 class="welcome-subheader">Please log in to track your progress.</h2>
-    <div id="firebaseui-auth-container"></div>
-    <div id="loader">Loading...</div>
-    <!-- <p style="text-align: center">Pokemon Web Safari</p> -->
+    <div class="login-wrapper">
+      <button id='login-button' class="login-button">Login</button>
+      <button id='register-button' class="login-button register-button">Register</button>
+    </div>
     <div class="pokedexWrapper">
       <div class="pokedex-bg">
         <div class="pokedex-header">
@@ -41,13 +40,6 @@
         </div>
       </div>
     </div>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="firebase/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#config-web-app -->
-    <script src="firebase/firebase-auth.js"></script>
-    <script src="firebase/firebase-firestore.js"></script>
     <script src="popup.js"></script>
   </body>
 </html>
