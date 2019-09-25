@@ -1,8 +1,10 @@
+/* Pokemon Font */
 @font-face {
   font-family: 'Pokemon';
   src: url('pokemon-dp-pro.ttf')  format('truetype');
 }
 
+/* Root Variables */
 :root {
   --base-width: 256px;
   --base-height: 192px;
@@ -31,6 +33,7 @@
   --color-pb-yellow4: #c0a0a0;
 }
 
+/* Popup styling */
 .welcome-header {
   text-align: center;
   font-family: 'Pokemon';
@@ -131,6 +134,7 @@
   top: 20%;
 }
 
+/* Pokedex Styling */
 .pokedexWrapper {
   display: flex;
   margin-bottom: 20px;
@@ -412,12 +416,17 @@
 
 /* Content Script Styles */
 .safari-scene {
+  display: none;
+}
+
+.safari-scene.is-active {
+  display: block;
   color: green;
   position: fixed;
-  bottom: 10px;
-  left: 10px;
-  width: 48px;
-  height: 48px;
+  bottom: 16px;
+  left: 16px;
+  width: 24px;
+  height: 24px;
   z-index: 1000;
 }
 
@@ -433,6 +442,91 @@
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
+}
+
+.ball {
+  cursor: pointer;
+}
+
+.ball:hover .ball-image {
+  animation: shake 4s cubic-bezier(.36,.07,.19,.97) both infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.ball-image {
+  position: absolute;
+  transform: rotateZ(0deg);
+  transition: 0.5s all;
+}
+
+.ball-image.is-animated {
+  animation: putInBag 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.star1 {
+  opacity: 0;
+  width: 16px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transform: rotateZ(45deg);
+  transition: all 0.5s;
+}
+
+.star1.is-animated {
+  opacity: 1;
+  top: -10px;
+  left: -12px;
+}
+
+.star2 {
+  opacity: 0;
+  width: 16px;
+  position: absolute;
+  top: 4px;;
+  left: 4px;
+  transition: all 0.5s;
+}
+
+.star2.is-animated {
+  opacity: 1;
+  top: -20px;
+}
+
+.star3 {
+  opacity: 0;
+  width: 16px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transform: rotateZ(-45deg);
+  transition: all 0.5s;
+}
+
+.star3.is-animated {
+  opacity: 1;
+  top: -10px;
+  left: 20px;
+}
+
+.bagTop, .bagBottom {
+  position: absolute;
+  top: 40px;
+  left: 4px;
+  z-index: -1;
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.bagBottom {
+  top: 35px;
+  z-index: 10000;
+}
+
+.bagTop.is-animated, .bagBottom.is-animated {
+  top: -20px;
 }
 
 @keyframes shake {
@@ -454,6 +548,26 @@
   10%, 15% {
     transform: translate3d(2px, 0, 0);
     transform: rotateZ(5deg);
+  }
+}
+
+@keyframes putInBag {
+  0% {
+    top: 0px;
+    left: 0px;
+    transform: rotateZ(0deg) scale(1);
+  }
+
+  50% {
+    top: -60px;
+    left: 20px;
+    transform: rotateZ(107deg) scale(0.75);
+  }
+
+  100% {
+    top: 40px;
+    left: 20px;
+    transform: rotateZ(345deg)  scale(0.7);
   }
 }
 

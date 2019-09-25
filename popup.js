@@ -7,7 +7,7 @@ $(function() {
     startNewGame();
     gameStarted = true;
   }
-  $.getJSON("pokedex.json", function(result) {
+  $.getJSON("pokedex-rarity.json", function(result) {
     var list = $(".pokemon-list");
     $.each(result, function(i, field) {
       if (i < numPokemon) { // up to which pokemon id to go to
@@ -40,19 +40,29 @@ $(function() {
         });
     });
   }, 1000);
+
+  $('.welcome-header').click(function() {
+    testBadgeText();
+  });
 });
 
 function getGameState() {
-  chrome.storage.sync.get("gameStarted", function(result) {
+  chrome.storage.local.get("gameStarted", function(result) {
     return(result.gameStarted);
   });
 }
 
 function startNewGame() {
-  chrome.storage.sync.set({ "gameStarted" : "true" });
-  chrome.storage.sync.set({ "numFound" : 0 });
+  chrome.storage.local.set({ "gameStarted" : "true" });
+  chrome.storage.local.set({ "numFound" : 0 });
+  chrome.storage.local.set({ "unopenedCount" : 0 });
   for (let i = 0; i < numPokemon; i++) {
     let key = `${i}Found`;
-    chrome.storage.sync.set({ key : "false" });
+    chrome.storage.local.set({ key : "false" });
   }
+}
+
+const testBadgeText = () => {
+  chrome.browserAction.setBadgeBackgroundColor({ color: "red" });
+  chrome.browserAction.setBadgeText({ text: '1' });
 }
